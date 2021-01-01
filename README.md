@@ -5,10 +5,10 @@ Swift 및 iOS에 대해 스터디하고 내용을 정리하는 공간입니다.
 
 > 👩🏻‍💻 참여한 사람들 🧑🏻‍💻
 >
-> - [이준기](link needed)
+> - [이준기](https://github.com/RURUGURU)
 > - [김영채](https://github.com/kevinkim2586)
-> - [박시현](link needed)
-> - [김진영](link needed)
+> - [박시현](https://github.com/tlguszz10)
+> - [김진영](https://github.com/z3rosmith)
 
 ## Requirements
 
