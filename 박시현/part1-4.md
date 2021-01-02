@@ -86,11 +86,17 @@ print(indexZeroItem) // chulsoo
 print(names[1...3]) // ["jenny", "yagom", "jinhee"]
 ```
 딕셔너리(Dictionary) - 키와 값을 가짐
+```swift
 var numberForName: Dictionary<String, Int> = Dictionary<String, Int>()
+```
 위 표현과 정확히 같은 표현 // Dictionary<String, Int> = [String: Int]
+```swift
 var numberForName: [String: Int] =  [String: Int]()
+```
 위 표현과 정확히 같은 표현
+```swift
 var numberForName: StringIntDictionary = StringIntDictionary()
+```
 
 딕셔너리의 사용
 
@@ -100,6 +106,7 @@ print(numberForName["chulsoo"]) // 200
 print(numberForName["minji"]) // nil - 딕셔너리 내부에 없는 키로 접근해도 오류는 안나지만 nil을 반환한다
 ```
 
+```swift
 numberForName["max"] = 999 // max라는 키로 999라는 값을 추가
 print(numberForName["max"]) // 999
 print(numberForName.removeValue(forkey: "yagom")) // yagom에 해당하는 값을 제거해주기 때문에 nil이 반환됌
