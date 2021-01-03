@@ -55,3 +55,64 @@ default:
     print("10 < Value <= 100") // 한정된 범위가 명확지 않다면 default는필수
 }
 ```
+튜플 switch case
+
+```swift
+typealias NameAge = (name: String, age: Int)//별칭선언
+
+let tupleValue: NameAge = ("yagom", 99)
+
+switch tupleValue {
+case("yagom", 99):
+    print("정확히 맞췄습니다 !")
+default:
+    print("누굴 찾나요?")
+}
+```
+
+반복문
+
+```swift
+for i in 0...2 {
+    print(i)
+} /// 0 1 2
+
+for i in 0...5 {
+    if i.isMultiple(of: 2){
+        print(i)
+        continue // continue 키워드를 사용하면 바로 다음 시퀀스로 건너뜁니다
+    }
+    print("\(i) == 홀수")
+} // 0 1==홀수 2 3==홀수 4 5 == 홀수
+
+let helloSwift: String = "Hello Swift!"
+
+for char in helloSwift {
+    print(char)
+}
+
+var result: Int = 1
+
+let friends: [String: Int] = ["Jay": 35, "Joe": 29, "Jenny", 31]
+
+for tuple in friends {
+    print(tuple)
+} //("Joe", 29) ("Jay", 35) ("Jenny", 31)
+
+let 주소: [String: String] = ["도": "충청북도", "시군구": "청주시 청원구", "동읍면": "율량동"]
+
+for (키, 값) in 주소 {
+    print("\(키) : \(값)")
+}// 도 : 충청북도 동읍면 : 율량동 시군구 : 청주시 청원구
+```
+
+while 반복 구문사용
+
+```swift
+var names: [String] = ["Joker", "Jenny", "Nova", "yagom"]
+
+while names.empty == false {
+    print("Good bye /(names.removeFirst())")
+    // removeFirst()는 요소를 삭제함과 동시에 삭제한 요소를 반환
+} // Good bye Joker Good bye Jenny Good bye Nova Good bye yagom
+```
