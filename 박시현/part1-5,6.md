@@ -1,5 +1,7 @@
 연산자
+
 삼항연산자 사용
+
 ```swift
 var valueA: Int = 3
 var valueB: Int = 5
@@ -17,7 +19,9 @@ resultValue = stringB.isEmpty ? 1.0 : 0.0
 ```
 
 조건문
+
 스위프트 if 구문은 조건의 값이 꼭 Bool타입의 값이어야함
+
 ```swift
 let first: Int = 5
 let second: Int = 7
@@ -34,6 +38,7 @@ else {
 ```
 
 switch문
+
 ```swift
 let integerValue: Int = 5
 
