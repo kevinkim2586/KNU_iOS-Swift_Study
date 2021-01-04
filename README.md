@@ -24,9 +24,9 @@ Swift 및 iOS에 대해 스터디하고 내용을 정리하는 공간입니다.
 
 > | Chapter | Subject           | 이준기 | 김영채 | 박시현 | 김진영 |
 > | ------- | ----------------- | ---- | ---- | ----  | ---- |
-> | 1       | 스위프트             |  X  |  [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter%201%20~%202.md)  |   [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/part1-1%2C2%2C3.md)   |  X |
-> | 2       | 스위프트 처음 시작하기  |  X  |  [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter%201%20~%202.md)  |   [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/part1-1%2C2%2C3.md)   |  X |
-> | 3       | 데이터 타입 기본      |  X  |  [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter3.md)  |   [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/part1-1%2C2%2C3.md)   |  X |
+> | 1       | 스위프트             |  X  |  [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter%201%20~%202.md)  |   [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/part1-1%2C2%2C3.md)   |  [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/김진영/part1/chapter1.md) |
+> | 2       | 스위프트 처음 시작하기  |  X  |  [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter%201%20~%202.md)  |   [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/part1-1%2C2%2C3.md)   |  [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/김진영/part1/chapter2.md) |
+> | 3       | 데이터 타입 기본      |  X  |  [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter3.md)  |   [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/part1-1%2C2%2C3.md)   |  [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/김진영/part1/chapter3.md) |
 > | 4       | 데이터 타입 고급      |  X  |   X  |  [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/part1-4.md)   |  X |
 > | 5       | 연산자              |  X  |   X  |  [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/part1-5%2C6.md)    |  X |
 > | 6       | 흐름 제어           |   X  |   X  |   [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/part1-5%2C6.md)   |  X |
