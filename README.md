@@ -31,7 +31,7 @@ Swift 및 iOS에 대해 스터디하고 내용을 정리하는 공간입니다.
 > | 5       | 연산자              |  X  |   X  |  [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/part1-5%2C6.md)    |  X |
 > | 6       | 흐름 제어           |   X  |   X  |   [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/part1-5%2C6.md)   |  X |
 > | 7       | 함수               |  X  |   X  |   [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/part1-7.md)   |  X |
-> | 8       | 옵셔널              |  X  |   X  |  [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/.md)    |  X |
+> | 8       | 옵셔널              |  X  |   X  |  [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/part1-8.md)    |  X |
 
 
 
