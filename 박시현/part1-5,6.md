@@ -1,4 +1,4 @@
-<h1>5. 연산자</h1>
+<h1>Chapter 5. 연산자</h1>
 
 삼항연산자 사용
 
@@ -18,7 +18,7 @@ var resultValue: Double = stringA.isEmpty ? 1.0 : 0.0
 resultValue = stringB.isEmpty ? 1.0 : 0.0
 ```
 
-<h1>6. 흐름제어</h1>
+<h1>Chapter 6. 흐름제어</h1>
 
 스위프트 if 구문은 조건의 값이 꼭 Bool타입의 값이어야함
 
