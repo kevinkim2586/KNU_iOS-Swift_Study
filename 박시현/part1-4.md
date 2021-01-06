@@ -1,6 +1,8 @@
 <h1>Chapter 4. 데이터 타입 고급</h1>
 
-타입추론 -
+<h3>4.1.2 타입추론</h3>
+
+* 타입추론
 
 ```swift
 let name = "kwanhee" 라고 타입을 지정을 안해줘도 컴파일러가 컴파일하면서 알아서 name을 String으로 지정해준다
@@ -8,8 +10,10 @@ let name = "kwanhee" 라고 타입을 지정을 안해줘도 컴파일러가 컴
 typealias MyInt = Int // Int의 또다른 이름이 MyInt이다
 let age: MyInt 이렇게 써줘도 이상없다
 ```
+<h2>4.3 튜플</h2>
 
-튜플 - 지정된 데이터의 묶음
+* 튜플 
+- 지정된 데이터의 묶음
 
 String, Int, Double 타입을 갖는 튜플
 ```swift
@@ -30,9 +34,15 @@ person.2 = 178.5
 ```swift
 print("이름: \(person.0), 나이: \(person.1), 신장: \(person.2)")
 ```
+<h2>4.4 컬렉션형</h2>
 
-컬렉션형 - 튜플 외에도 데이터를 묶어서 저장하고 관리할 수 있음
-배열 (Array)
+* 컬렉션형 
+- 튜플 외에도 데이터를 묶어서 저장하고 관리할 수 있음
+
+<h3>4.4.1 배열 (Array)</h3>
+
+* 배열
+
 ```swift
 var names: Array<String> = ["yagom", "chulsoo", "younghee", "yagom"]
 ```
@@ -85,7 +95,12 @@ print(lastItem) // max
 print(indexZeroItem) // chulsoo
 print(names[1...3]) // ["jenny", "yagom", "jinhee"]
 ```
-딕셔너리(Dictionary) - 키와 값을 가짐
+
+<h3>4.4.2 딕셔너리</h3>
+
+* 딕셔너리(Dictionary)
+- 키와 값을 가짐
+
 ```swift
 var numberForName: Dictionary<String, Int> = Dictionary<String, Int>()
 ```
