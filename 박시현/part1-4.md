@@ -99,6 +99,7 @@ print(names[1...3]) // ["jenny", "yagom", "jinhee"]
 <h3>4.4.2 딕셔너리</h3>
 
 * 딕셔너리(Dictionary)
+
 - 키와 값을 가짐
 
 ```swift
@@ -127,9 +128,11 @@ print(numberForName["max"]) // 999
 print(numberForName.removeValue(forkey: "yagom")) // yagom에 해당하는 값을 제거해주기 때문에 nil이 반환됌
 print(numberForName["yagom", default: 0]) // 0 yagom에 해당하는 값이 없기때문에 기본값 0이 반환됌
 ```
+<h3>4.4.3 세트</h3>
 
-세트(Set) - 데이터를 순서 없이 하나의 묶음으로 저장
-순서가 중요하지 않거나 각 요소가 유일한 값일때 사용
+* 세트(Set) - 데이터를 순서 없이 하나의 묶음으로 저장
+
+-순서가 중요하지 않거나 각 요소가 유일한 값일때 사용
 
 ```swift
 var names: Set<String> = Set<String>() // 빈 세트 생성
@@ -146,7 +149,11 @@ print(names.count) // jenny가 삽입되었으므로 4
 print(names.remove("john")) // nil john이라는 데이터가 존재하지 않음
 ```
 
-열거형 - 연관된 항목들을 묶어서 표현할 수 있는 타입
+<h2>4.5 열거형</h2>
+
+* 열거형 
+
+- 연관된 항목들을 묶어서 표현할 수 있는 타입
 (1)제한된 선택지를 주고 싶을때
 (2)정해진 값 외에는 입력받고 싶지 않을때
 (3)예상된 입력 값이 한정되어 있을때
