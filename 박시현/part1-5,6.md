@@ -20,6 +20,8 @@ resultValue = stringB.isEmpty ? 1.0 : 0.0
 
 <h1>Chapter 6. 흐름제어</h1>
 
+<h3>6.1.1 if 구문</h3>
+
 스위프트 if 구문은 조건의 값이 꼭 Bool타입의 값이어야함
 
 ```swift
@@ -36,8 +38,9 @@ else {
     print("first == second")
 } // 소괄호 생략 가능
 ```
+<h3>6.1.2 switch 구문</h3>
 
-switch문
+* switch문
 
 ```swift
 let integerValue: Int = 5
@@ -70,7 +73,7 @@ default:
 }
 ```
 
-반복문
+<h3>6.2.1 for-in 구문</h3>
 
 ```swift
 for i in 0...2 {
@@ -106,7 +109,7 @@ for (키, 값) in 주소 {
 }// 도 : 충청북도 동읍면 : 율량동 시군구 : 청주시 청원구
 ```
 
-while 반복 구문사용
+<h3>6.2.2 while 구문</h3>
 
 ```swift
 var names: [String] = ["Joker", "Jenny", "Nova", "yagom"]
