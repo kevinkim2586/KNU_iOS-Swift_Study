@@ -13,7 +13,7 @@
 
 진수별 정수 표현
 
-```
+```swift
 let decialInteger: Int = 28
 let binaryInteger: Int = 0b11100    // 2진수로 10진수 28을 표현
 let octalInteger: Int = 0o34        // 8진수로 10진수 28을 표현
@@ -41,7 +41,7 @@ Double : 최소 15자리 십진수 표현 가능
 
 ### 3.5.1 특수문자
 
-```
+```swift
 \n : 문자열 바꾸기
 \\ : 백슬래쉬
 \" : 큰따옴표
