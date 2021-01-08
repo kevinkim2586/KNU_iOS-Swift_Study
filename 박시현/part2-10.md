@@ -66,6 +66,30 @@ yagomPosition.point = CoordinatePoint(x: 20, y: 10)
 
 <h3>10.1.2 지연 저장 프로퍼티</h3>
 
+지연 저장 프로퍼티는 호출이 있어야 값을 초기화하며 이 때 lazy 키워드를 사용
+주로 복잡한 클래스나 구조채를 구현할 때 많이 사용하고 지연 저장 프로퍼티를 잘 사용하면 불필요한 성능저하나 공간 낭비를 줄일 수 있음
+
+```swift
+struct CoordinatePoint {
+    var x: Int = 0
+    var y: Int = 0
+}
+
+class position {
+    lazy var point: CoordinatePoint = CoordinatePoint()
+    let name: String
+    
+    init(name: String) {
+        self.name = name
+    }
+}
+
+let yagomPosition: Position = Position(name: "yagom")
+
+//  이 코드를 통해 point 프로퍼티로 처음 접근할 때 point 프로퍼티의 CoordinatePoint가 생성됨
+print(yagomPosition.point) // x:0, y: 0
+```
+
 <h3>10.1.3 연산 프로퍼티</h3>
 
 <h3>10.1.4 프로퍼티 감시자</h3>
