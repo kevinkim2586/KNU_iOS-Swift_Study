@@ -129,11 +129,103 @@ print(yagomPosition.oppositePoint) // -10, -20
 
 <h3>10.1.4 프로퍼티 감시자</h3>
 
+프로퍼티 값이 변경됨애 따라 적절한 작업을 취함 
+
+프로퍼티 값이 변경되기 직전에 호출하는 willSet 메서드와 프로퍼티 값이 변경된 직후에 호출하는 didSet 메서드가 있음
+
+```swift
+class Account {
+    var credit: Int = 0 {
+        willSet {
+            print("잔액이 \(credit)원에서 \(newValue)원으로 변경될 예정입니다.")
+        }
+        
+        didSet {
+            print("잔액이 \(oldValue)원에서 \(credit)원으로 변경되었습니다.")
+        }
+    }
+}
+
+let myAccount: Account = Account() // 잔액이 0원에서 1000원으로 변경될 예정입니다.
+my Account.credit = 1000 // 잔액이 0원에서 1000원으로 변경되었습니다.
+
+```
+
 <h3>10.1.5 전역변수와 지역변수</h3>
+
+우리가 이제까지 변수라고 통칭했던 전역변수 또는 지역변수는 저장변수라고 할 수 있음
+
+var wonInPocket: Int = 2000 {
+    willSet {
+        print("주머니의 돈이 \(wonInPocket)원에서 \(newValue)원으로 변경될 예정입니다.")
+    }
+    
+    didSet {
+        print("주머니의 돈이 \(oldValue)원에서 \(wonInPocket)원으로 변경되었습니다.")
+    }
+ }
+ 
+ var dollarInPocket: Double {
+    get {
+        return Double(wonInPocket) / 1000.0
+    }
+    
+    set {
+        wonInPocket = Int(newValue * 1000.0)
+        print("주머니의 달러를 \(newValue)달러로 변경 중입니다.")
+    }
+ }
+ 
+ // 주머니의 돈이 2000원에서 3500원으로 변경될 예정입니다.
+ // 주머니의 돈이 2000원에서 3500원으로 변경되었습니다.
+ dollarInPocket = 3.5 // 주머니의 달러를 3.5달러로 변경 중입니다.
 
 <h3>10.1.6 타입 프로퍼티</h3>
 
+각각의 인스턴스가 아닌 타입 자체에 속하는 프로퍼티를 타입 프로퍼티라고 함
+
+인스턴스의 생성 여부와 상관없이 타입프로퍼티의 값은 하나며, 그 타입의 모든 인스턴스가 공통으로 사용하는 값, 모든 인스턴스에서 공용으로 접근하고 값을 변경할 수 있는 변수 등을 정의 할 때 유용
+
+```swift
+class AClass {
+    // 저장 타입 프로퍼티
+    static var typeProperty: Int = 0
+    
+    // 저장 인스턴스 프로퍼티
+    var instanceProperty: Int = 0 {
+        didSet {
+            // Self.typeProperty는 AClass.typeProperty와 같은 표현입니다.
+            selft.typeProperty = instanceProperty + 100
+        }
+    }
+    
+    // 연산 타입 프로퍼티
+    static var typeComputedProperty: Int {
+        get {
+            return typeProperty
+        }
+        set {
+            typeProperty = newValue
+        }
+    }
+}
+
+AClass.typeProperty = 123
+
+let classInstance: AClass = AClass()
+classInstance.instanceProperty = 100
+
+print(AClass.typeProperty) // 200
+print(AClass.typeComputedProperty) // 200
+```
+
 <h3>10.1.7 키 경로</h3>
+
+키 경로를 사용하여 간접적으로 특정 타입의 어떤 프로퍼티 값을 가리켜야 할지 미리 지정해두고 사용할 수 있다
+
+WritablekeyPath<Root, Value>* '값' 타입에 키 경로 타입으로 읽고 쓸 수 있음
+
+ReferenceWritableKeyPath<Root, Value>타입은 클래스 타입에 키 경로 타입으로 읽고 쓸 수 있음
 
 <h2>10.2 메서드</h2>
 
