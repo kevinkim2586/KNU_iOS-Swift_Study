@@ -39,8 +39,8 @@ Swift 및 iOS에 대해 스터디하고 내용을 정리하는 공간입니다.
 
 > | Chapter | Subject           | 이준기 | 김영채 | 박시현 | 김진영 |
 > | ------- | ----------------- | ---- | ---- | ----  | ---- |
-> |  9      | 구조체와 클래스       | X    |  [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter9.md)   |   [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/part2-10.md)   |     |
-> |  10     | 프로퍼티와 메서드      | X    |  [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter10.md)   |   X   |  X   |
+> |  9      | 구조체와 클래스       | X    |  [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter9.md)   |   [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/part2-10.md)   |   X  |
+> |  10     | 프로퍼티와 메서드      | X    |  [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter10.md)   |   [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/part2-10.md)   |  X   |
 > |  11     | 인스턴스 생성 및 소멸   | X    |  [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter11.md)   |   X   |  X   |
 > |  12     | 접근제어            | X    |  [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter12.md)   |   X   |  X   |
 
