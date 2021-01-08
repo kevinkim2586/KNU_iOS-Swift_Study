@@ -41,7 +41,7 @@ Swift 및 iOS에 대해 스터디하고 내용을 정리하는 공간입니다.
 > | ------- | ----------------- | ---- | ---- | ----  | ---- |
 > |  9      | 구조체와 클래스       | X    |  [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter9.md)   |   X   |  X   |
 > |  10     | 프로퍼티와 메서드      | X    |  [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter10.md)   |   X   |  X   |
-> |  11     | 인스턴스 생성 및 소멸   | X    |  X   |   X   |  X   |
+> |  11     | 인스턴스 생성 및 소멸   | X    |  [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter11.md)   |   X   |  X   |
 > |  12     | 접근제어            | X    |  X   |   X   |  X   |
 
 * **Part 3: 함수형 프로그래밍과 스위프트**
