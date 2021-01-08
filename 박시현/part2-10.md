@@ -21,6 +21,22 @@ struct CoordinatePoint [ // 구조체
 let yagomPoint: CoordinatePoint = CoordinatePoint(x: 10, y: 5)
 ```
 
+```swift
+// 사람의 위치정보
+class Position {
+    var point: CoordinatePoint // 저장 프로퍼티 (변수) - 위치(point)는 변경될 수 있음을 의미
+    let name: String // 저장 프로퍼티 (상수)
+    
+    init(name: String, currentPoint: CoordinatePoint) { // 저장 프로퍼티에 초기값이 없다면 클래스에서는 init을 꼭 따로 써줘야함
+        self.name = name
+        self.point = currentPoint
+    }
+}
+
+//사용자 정의 이니셜라이저를 호출해야함 그렇지않으면 프로퍼티 초깃값을 할당할 수 없기 때문에 인스턴스 생성이 불가능
+let yagomPosition: Position: Position(name: "yagom", currentPoint: yagomPoint)
+```
+
 <h3>10.1.2 지연 저장 프로퍼티</h3>
 
 <h3>10.1.3 연산 프로퍼티</h3>
