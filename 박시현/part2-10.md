@@ -227,9 +227,130 @@ WritablekeyPath<Root, Value>* '값' 타입에 키 경로 타입으로 읽고 쓸
 
 ReferenceWritableKeyPath<Root, Value>타입은 클래스 타입에 키 경로 타입으로 읽고 쓸 수 있음
 
+```swift
+class Person {
+    var name: String
+    
+    init(name: String) {
+        self.name = name
+    }
+}
+
+struct Stuff {
+    var name: String
+    var owner: Person
+}
+
+print(type(of: \Person.name)) // ReferenceWritableKeyPath<Person, String>
+print(type(of: \Stuff.name)) // WritableKeyPath<Stuff, String>
+
+```
+
 <h2>10.2 메서드</h2>
+
+메서드 - 특정 타입에 관련된 함수
+
+구조체와 열거형이 메서드를 가질 수 있다는 것은 기존 프로그래밍 언어와 스위프트간의 큰 차이점이다
+
 
 <h3>10.2.1 인스턴스 메서드</h3>
 
+클래스의 인스턴스 메서드
+```swift
+Class LevelClass {
+    // 현재 레벨을 저장하는 저장 프로퍼티
+    var level: Int = 0 {
+        // 프로퍼티 값이 변경되면 호출하는 프로퍼티 감시자
+        didSet {
+            print("Level \(level)")
+        }
+    }
+    
+    // 레벨이 올랐을 때 호출할 메서드
+    func levelUp() {
+        print("Level Up!")
+        level += 1
+    }
+    
+    // 레벨이 감소했을 때 호출할 메서드
+    func levelDown() {
+        print("Level Down")
+        level -= 1
+        if level < 0 {
+            reset()
+        }
+    }
+    
+    // 특정 레벨로 이동할 때 호출할 메서드
+    func jumpLevel(to: Int) {
+        print("Jump to \(to)")
+        level = to
+    }
+    
+    // 레벨을 초기화할 때 호출할 메서드
+    func reset() {
+        print("Reset!")
+        level = 0
+    }
+}
+
+var levelClassInstance: LevelClass = LevelClass()
+levelClassInstance.levelUp() // Level Up! Level 1
+levelClassInstance.levelDown() // Level Down Level 0
+levelClassInstance.levelDown() // Level Down Level -1 Reset! Level 0
+levelClassInstance.jumpLevel(to: 3) // Jump to 3 Level 3
+```
+
+mutaiting 키워드 구조체나 열거형 등 값 타입의 값을 수정할때 (인스턴스 내부의 값을 변경한다는 것 명시)
+
+self 프로퍼티
+
+인스턴스를 더 명확히 지칭하고 싶을 때 사용
+
+```swift
+class LevelClass {
+    var level: Int = 0
+    
+    func jumpLevel(to level: Int) {
+        print("Jump to \(Level)")
+        self.level = level
+    }
+}
+```
+
 <h3>10.2.2 타입 메서드</h3>
+
+타입 자체에 호출이 가능한 메서드
+
+메서드 앞에 static 키워드를 사용하여 타입메서드임을 나타내준다
+
+```swift
+
+Class AClass {
+    static func staticTypeMethod() {
+        print("AClass staticTypeMethod")
+    }
+    
+    class func classTypeMethod() {
+        print("AClass classTypeMethod")
+    }
+ }
+ 
+ class BClass: AClass {
+    /*
+    //  오류 발생!! 재정의 불가!
+    override static func staticTypeMethod() {
+    }
+    */
+    
+    override class func classTypeMethod() {
+        print("BClass classTypeMethod")
+    }
+ }
+ 
+ AClass.staticTypeMethod() // AClass staticTypeMethod
+ AClass.classTypeMethod() // AClass classTypeMethod
+ BClass.classTypeMethod() // BClass classTypeMethod
+ 
+ ```
 
