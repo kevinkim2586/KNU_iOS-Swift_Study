@@ -16,6 +16,9 @@ struct CoordinatePoint [ // 구조체
     var x: Int // 저장 프로퍼티
     var y: Int // 저장 프로퍼티
 }
+
+// 구조체에는 기본적으로 저장 프로퍼티를 매개변수로 갖는 이니셜라이저가 있다.
+let yagomPoint: CoordinatePoint = CoordinatePoint(x: 10, y: 5)
 ```
 
 <h3>10.1.2 지연 저장 프로퍼티</h3>
