@@ -93,6 +93,36 @@ print(yagomPosition.point) // x:0, y: 0
 
 <h3>10.1.3 연산 프로퍼티</h3>
 
+연산 프로퍼티의 정의와 사용
+
+```swift
+struct CoordinatePoint {
+    var x: Int // 저장 프로퍼티
+    var y: Int // 저장 프로퍼티
+    
+    // 대칭 좌표
+    var oppositePoint: CoordinatePoint { // 연산 프로퍼티
+        // 접근자
+        get {
+            return CoordinatePoint(x: -x, y: -y)
+        }
+        // 설정자
+        set(opposite) {
+            x = -opposite.x
+            y = -opposite.y
+        }
+    }
+}
+
+var yagomPosition: CoordinatePoint = CoordinatePoint(x: 10, y: 20)
+
+//현재 좌표
+print(yagomPosition) // 10, 20
+
+//대칭 좌표
+print(yagomPosition.oppositePoint) // -10, -20
+```
+
 <h3>10.1.4 프로퍼티 감시자</h3>
 
 <h3>10.1.5 전역변수와 지역변수</h3>
