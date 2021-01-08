@@ -95,6 +95,10 @@ print(yagomPosition.point) // x:0, y: 0
 
 연산 프로퍼티의 정의와 사용
 
+연산 프로퍼티를 사용하면 하나의 프로퍼티에 접근자와 설정자가 모두 모여있고 해당 프로퍼티가 어떤 역할을 하는지 좀 더 명확하게 표현이 가능하다
+
+관용적인 표현으로 set() 괄호 내부의 매개변수를 따로 표기하지 않고 newValue를 이용해 x = -newValue.x 이런식으로 표현이 가능하다
+
 ```swift
 struct CoordinatePoint {
     var x: Int // 저장 프로퍼티
