@@ -36,6 +36,33 @@ class Position {
 //사용자 정의 이니셜라이저를 호출해야함 그렇지않으면 프로퍼티 초깃값을 할당할 수 없기 때문에 인스턴스 생성이 불가능
 let yagomPosition: Position: Position(name: "yagom", currentPoint: yagomPoint)
 ```
+저장 프로퍼티의 값이 있어도 그만, 없어도 그만인 옵셔널이라면 초기값을 굳이 안넣어도됨
+
+```swift
+// 좌표
+struct CoordinatePoint {
+    // 위치는 x, y값이 모두 있어야 하므로 옵셔널이면 안 됨
+    var x: Int
+    var y: Int
+}
+
+// 사람의 위치 정보
+class Position {
+    // 현재 사람의 위치를 모를 수도 있음
+    var point: CoordinatePoint?
+    let name: String
+    
+    init(name: String) {
+        self.name = name
+    }
+}
+
+//이름은 필수지만 위치는 모를 수도 있음}
+let yagomPosition: Position = Position(name: "yagom")
+
+//위치를 알게되면 그 때 위치값 할당
+yagomPosition.point = CoordinatePoint(x: 20, y: 10)
+```
 
 <h3>10.1.2 지연 저장 프로퍼티</h3>
 
