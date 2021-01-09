@@ -137,6 +137,7 @@ yagom.name = "Eric"   //오류 발생!
 
 - 모든 저장 프로퍼티의 이름과 할당할 값을 매개변수로 넣으면서 초기화하는 것
 - 클래스는 Memberwise Initializer 제공 X → 구조체는 제공
+- The Size structure automatically receives an init(width:height:) memberwise initializer, which you can use to initialize a new Size instance:
 
 ```swift
 struct Point{
