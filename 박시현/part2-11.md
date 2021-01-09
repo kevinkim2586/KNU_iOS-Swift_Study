@@ -266,6 +266,7 @@ else {
 
 인스턴스를 초기화할 때 함수나 클로저가 호출되면서 연산 결과값을 프로퍼티 기본값으로 제공해주기때문에 클로저나 함수의 반환 타입은 프로퍼티의 타입과 일치해야한다
 
+```swift
 struct Student {
   var name: String?
   var number: Int?
@@ -287,6 +288,7 @@ class SchoolClass {
 
 let myclass: SchoolClas = SchoolClass()
 print(myClass.students.count) // 15
+```
 
 <h2>11.2 인스턴스 소멸</h2>
 
