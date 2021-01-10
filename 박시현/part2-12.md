@@ -111,9 +111,9 @@ public func someFunction(a: AClass) -> AClass { // 오류 발생!
 
 <h2>12.5 private와 fileprivate</h2>
 
-같은 파일 내부에서 fileprivate 접근수준으로 지정한 요소는 같은 파일 어떤 코드에서도 접근이 가능하다 그러나 private 접근수준으로 지정한 요소는 같은 파일 내부에 다른 타입의 코드가
+같은 파일 내부에서 fileprivate 접근수준으로 지정한 요소는 같은 파일 어떤 코드에서도 접근이 가능하다 
 
-있더라도 접근이 불가능하다
+그러나 private 접근수준으로 지정한 요소는 같은 파일 내부에 다른 타입의 코드가 있더라도 접근이 불가능하다
 
 ```swift
 public struct SomeType {
