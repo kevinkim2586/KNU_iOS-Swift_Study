@@ -16,11 +16,15 @@
 
 <h2>12.2 접근수준</h2>
 
-개방 접근수준 - open , 접근도 - 높음 , 범위 - 모듈 외부까지 , 비고 - 클래스에서만 사용
-공개 접근수준 - public, 접근도 - 조금 높음, 범위 - 모듈 외부까지, 비고 - x
-내부 접근수준 - Internal, 접근도 - 보통, 범위 - 모듈 내부, 비고 - x
-파일외부비공개 접근수준 - fileprivate, 접근도 - 조금 낮음, 범위 - 파일 내부, 비고 - x
-비공개 접근수준 - private, 접근도 - 낮음, 범위 - 기능 정의 내부, 비고 - x
+* 개방 접근수준 - open , 접근도 - 높음 , 범위 - 모듈 외부까지 , 비고 - 클래스에서만 사용
+
+* 공개 접근수준 - public, 접근도 - 조금 높음, 범위 - 모듈 외부까지, 비고 - x
+
+* 내부 접근수준 - Internal, 접근도 - 보통, 범위 - 모듈 내부, 비고 - x
+
+* 파일외부비공개 접근수준 - fileprivate, 접근도 - 조금 낮음, 범위 - 파일 내부, 비고 - x
+
+* 비공개 접근수준 - private, 접근도 - 낮음, 범위 - 기능 정의 내부, 비고 - x
 
 <h3>12.2.1 공개 접근수준 - public</h3>
 
@@ -57,15 +61,100 @@ open class NSSstring : NSObject, NSCopying, NSMutableCopying, NSSecureCoding {
 
 <h3>12.2.3 내부 접근수준 - internal</h3>
 
+내부 접근수준은 기본적으로 모든 요소에 암묵적으로 지정하는 기본 접근수준
+
 <h3>12.2.4 파일외부비공개 접근수준 - fileprivate</h3>
+
+파일외부비공개 접근수준으로 지정된 요소는 그 요소가 구현된 소스파일 내부에서만 사용가능
 
 <h3>12.2.5 비공개 접근수준 - private</h3>
 
+비공개 접근수준은 가장 한정적인 범위 , 그 기능을 정의하고 구현한 범위 내에서만 사용가능
+
 <h2>12.3 접근제어 구현</h2>
+
+각각의 접근수준을 요소앞에 지정해주기만 하면 된다 internal은 기본 접근수준이므로 굳이 표기해주지 않아도 된다
+
+```swift
+open class OpenClass {
+  open var openProperty: Int = 0
+  public var publicProperty: Int = 0
+  internal var internalProperty: Int = 0
+  fileprivate var filePrivateProperty: Int = 0
+  private var privateProperty: Int = 0
+  
+  open func openMethod() {}
+  public func publicMethod() {}
+  internal func internalMethod() {}
+  fileprivate func fileprivateMethod() {}
+  private func privateMethod() {}
+}
+```
 
 <h2>12.4 접근제어 구현 참고사항</h2>
 
+접근수준의 규칙에는 '상위 요소보다 하위 요소가 더 높은 접근수준을 가질 수 없다'이다
+
+```swift
+private class AClass {
+  // 공개 접근수준을 부여해도 AClass의 접근수준이 비공개 접근수준이므로 이 메서드의 접근수준도 비공개 접근수준으로 취급된다
+  public func someMethod() {
+    //...
+  }
+}
+
+// AClass의 접근수준이 비공개 접근수준이므로 공개 접근수준의 함수의 매개변수나 반환 값 타입으로 사용할 수 없다
+public func someFunction(a: AClass) -> AClass { // 오류 발생!
+  return a
+}
+```
+
 <h2>12.5 private와 fileprivate
 
+같은 파일 내부에서 fileprivate 접근수준으로 지정한 요소는 같은 파일 어떤 코드에서도 접근이 가능하다 그러나 private 접근수준으로 지정한 요소는 같은 파일 내부에 다른 타입의 코드가
+
+있더라도 접근이 불가능하다
+
+```swift
+public struct SomeType {
+  private var privateVariable = 0
+  fileprivate var fileprivateVariable = 0
+}
+
+// 같은 타입의 익스텐션에서는 private 요소에 접근 가능
+extension SomeType {
+  public func publicMethod() {
+    print("\(self.privateVariable), \(self.fileprivateVariable)")
+  }
+  
+  private func privateMethod() {
+    print("\(self.privateVariable), \(self.fileprivateVariable)")
+  }
+  
+  fileprivate func fileprivateMethod() {
+    print("\(self.privateVariable), \(self.fileprivateVariable)")
+  }
+}
+
+struct AnotherType {
+  var someInstance: SomeType = SomeType()
+  
+  mutating func someMethod() {
+    // public 접근수준에서는 어디서든 접근 가능
+    self.someInstance.publicMethod() // 0, 0
+    
+    // 같은 파일에 속해 있는 코드이므로 fileprivate 접근수준 요소에 접근 가능
+    self.someInstance.fileprivateVaribale = 100
+    self.someInstance.fileprivateMethod() // 0, 100
+    
+    // 다른 타입 내부의 코드이므로 private 요소에 접근 불가! 오류!
+    // self.someInstance.privateVariable = 100
+    // self.someInstance.privateMethod()
+  }
+}
+
+var anotherInstance = AnotherType()
+anotherInstance.someMethod()
+```
 <h2>12.6 읽기 전용 구현
 
