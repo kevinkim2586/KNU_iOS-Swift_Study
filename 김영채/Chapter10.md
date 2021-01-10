@@ -284,6 +284,7 @@ levelClassInstance.levelUp()
 ****mutating 키워드**
 
 → 자신의 property 값을 수정할 때 instance of class 는 크게 신경 안 써도 되지만, struct 나 enum 은 "값 타입"이므로 메서드 앞에 mutating 키워드를 붙여서 해당 메서드가 인스턴스 내부의 값을 변경한다는 것을 명시해야 함.
+→ 즉, 구조체 내부에서 구조체 자체의 프로퍼티 값을 수정할 때는, 그 행동을 수행하는 메서드 앞에 키워드 mutating 을 꼭 붙여줘야 한다는 얘기. 구조체 외부에서 수정할 때는 상관 없음.
 
 ```swift
 struct LevelStruct{
