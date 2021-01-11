@@ -93,6 +93,7 @@ let reversed: [String] = names.sorted { (first, second) in
 let reversed: [String] = names.sorted {
   return $0 > $1 // first, second 대신 사용
 }
+```
 
 <h3>13.3.3 암시적 반환 표현</h3>
 
@@ -101,7 +102,7 @@ let reversed: [String] = names.sorted {
 ```swift
 // 암시적 반환 표현의 사용
 let reversed: [String] = names.sorted {$0 > $1} // 13.1 코드에서 이렇게 줄이는게 가능함
-
+```
 <h3>13.3.4 연산자 함수</h3>
 
 클로저로서의 연산자 함수 사용
