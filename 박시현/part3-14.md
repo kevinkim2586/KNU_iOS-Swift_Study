@@ -117,6 +117,7 @@ optionalDictionary?["numberArray"]?[2] // 3
 guard 구문의 옵셔널 바인딩 활용
 
 ```swift
+
 func greet(_ person: [String: String]) {
   guard let name: String = person["name"] else {
      return
@@ -144,4 +145,5 @@ func greet(_ person: [String: String]) {
  greet(personInfo)
  // Hello Jenny!
  // I hope the weather is nice in Korea
+ 
 ```
