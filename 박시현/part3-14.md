@@ -144,3 +144,4 @@ func greet(_ person: [String: String]) {
  greet(personInfo)
  // Hello Jenny!
  // I hope the weather is nice in Korea
+```
