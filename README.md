@@ -50,7 +50,7 @@ Swift 및 iOS에 대해 스터디하고 내용을 정리하는 공간입니다.
 > | ------- | ----------------- | ---- | ---- | ----  | ---- |
 > |  13     | 클로저                | X |  [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter13.md) | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/part3-13.md) |X |
 > |  14     | 옵셔널 체이닝과 빠른 종료 | X |  [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter14.md) |[O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/part3-14.md) |X |
-> |  15     | 맵, 필터, 리듀스 | X |  X |X |X |
+> |  15     | 맵, 필터, 리듀스 | X |  X | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/part3-15.md) |X |
 > |  16     | 모나드 | X |  X |X |X |
 
 * **Part 4: 확장**
