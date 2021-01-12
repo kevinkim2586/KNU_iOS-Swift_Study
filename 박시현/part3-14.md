@@ -82,4 +82,65 @@ if let roomNumber: Int = yagom.address?.building?.room?.number {
   print("Can not find room number")
 }
 ```
+
+옵셔널 체이닝을 통한 값 할당
+```swift
+yagom.address = Address(province: "충청북도", city: "청주시 청원구", street:
+  "충청대로", building: nil, detailAddress: nil)
+  yagom.address?.building = Building(name: "곰굴")
+  yagom.address?.building?.room = Room(number: 0)
+  yagom.address?.building?.room?.number = 505
+  
+  print(yagom.address?.building?.room?.number) // Optional(505)
+```
+옵셔널 체이닝을 통한 메서드 호출
+
+```swift
+yagom.address?.fullAddress()?.isEmpty //false
+yagom.address?.printAddress()
+```
+
+옵셔널 체이닝을 통한 서브스크립트 호출
+```swift
+let optionalArray: [Int]? = [1, 2, 3]
+optionalArray?[1] // 2
+
+var optionalDictionary: [String: [Int]]? = [String: [Int]]()
+optionalDictionary?["numberArray"] = optionalArray
+optionalDictionary?["numberArray"]?[2] // 3
+```
+
 <h2>14.2 빠른 종료</h2>
+
+핵심 키워드는 guard , if 구문과 유사하게 Bool 타입의 값으로 동작한다, if 구문과 다르게 else 구문이 항상 뒤에 따라와야 한다
+
+guard 구문의 옵셔널 바인딩 활용
+
+```swift
+func greet(_ person: [String: String]) {
+  guard let name: String = person["name"] else {
+     return
+  }
+  
+  print("Hello" \(name)!")
+  
+  guard let location: String = person["location"] else {
+    print("I hope the weather is nice near you")
+    return
+  }
+  
+  print("I hope the weather is nice in \(location)")
+ }
+ 
+ var eprsonInfo: [String: String] = [String: String]()
+ personInfo["name"] = "Jenny"
+ 
+ greet(personInfo)
+ // Hello Jenny!
+ // I hope the weather is nice near you
+ 
+ personInfo["location"] = "Korea"
+ 
+ greet(personInfo)
+ // Hello Jenny!
+ // I hope the weather is nice in Korea
