@@ -51,7 +51,7 @@ Swift 및 iOS에 대해 스터디하고 내용을 정리하는 공간입니다.
 > |  13     | 클로저                | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EC%9D%B4%EC%A4%80%EA%B8%B0/part3/chapter13.md) |  [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter13.md) | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/part3-13.md) |X |
 > |  14     | 옵셔널 체이닝과 빠른 종료 | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EC%9D%B4%EC%A4%80%EA%B8%B0/part3/chapter14.md) |  [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter14.md) |[O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/part3-14.md) |X |
 > |  15     | 맵, 필터, 리듀스 | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EC%9D%B4%EC%A4%80%EA%B8%B0/part3/chapter15.md) |  [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter15.md) | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/part3-15.md) |X |
-> |  16     | 모나드 | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EC%9D%B4%EC%A4%80%EA%B8%B0/part3/chapter16.md) |  X | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/part3-16.md) |X |
+> |  16     | 모나드 | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EC%9D%B4%EC%A4%80%EA%B8%B0/part3/chapter16.md) |  [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter16.md) | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/part3-16.md) |X |
 
 * **Part 4: 확장**
 
