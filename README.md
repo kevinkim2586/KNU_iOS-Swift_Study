@@ -57,7 +57,7 @@ Swift 및 iOS에 대해 스터디하고 내용을 정리하는 공간입니다.
 
 > | Chapter | Subject           | 이준기 | 김영채 | 박시현 | 김진영 |
 > | ------- | ----------------- | ---- | ---- | ----  | ---- |
-> | 17      | 서브스크립트          | X       | X       | X       | X  |
+> | 17      | 서브스크립트          | X       | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter17.md)       | X       | X  |
 > | 18      | 상속     | X       | X       | X       | X  |
 > | 19      | 타입캐스팅| X       | X       | X       | X  |
 > | 20      | 프로토콜| X       | X       | X       | X  |
