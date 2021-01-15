@@ -51,4 +51,49 @@ print(jay.introduction) // 이름 : Jay. 나이 : 10
 jay.speak() // 가나다라마바사
 jay.study() // Study hard...
 ```
+
+<h2>18.2 재정의</h2>
+재정의(override) - 자식클래스가 부모클래스로부터 물려받은 특성(인스턴스 메서드, 타입 메서드, 인스턴스 프로퍼티, 타입 프로퍼티, 서브스크립트 등)
+
+을 그대로 사용하지 않고, 자신만의 기능으로 변경하여 사용할 수 있는것
+
+<h3>18.2.1 메서드 재정의</h3>
+```swift
+메서드 재정의
+class Person {
+  var name: String = " "
+  var age: Int = 0
   
+  var introduction: String {
+    return "이름 : \(name). 나이 : \(age)"
+  }
+  
+  func speak() {
+    print("가나다라마바사")
+  }
+  
+  class func introduceClass() -> String {
+    return "인류의 소원은 평화입니다"
+  }
+
+class student: Person {
+  var grade: String = "F"
+  
+  func study() {
+    print("Study hard...")
+  }
+  
+  override func speak() {
+    print("저는 학생입니다.")
+  }
+}
+
+class UniversityStudent: Student {
+  var major: String = " "
+  
+  class func introduceClass() {
+    print(super.introduceClass())
+  }
+  
+  override class func introduceClass() -> String {
+    return "대학생의 소원은 A+ 입니다."
