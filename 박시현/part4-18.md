@@ -120,3 +120,12 @@ print(Student.introduceClass()) // 인류의 소원은 평화입니다.
 print(UniversityStudent.introduceClass() as String) // 대학생의 소원은 A+ 입니다.
 UniversityStudent.introduceClass() as Void // 인류의 소원은 평화입니다.
 ```
+
+<h3>18.2.2 프로퍼티 재정의</h3>
+메서드 재정의와 같다 
+
+읽기 쓰기가 모두 가능한 프로퍼티를 재정의 할 때  설정자만 따로 재정의 할수는 없고
+
+접근자와 설정자를 모두 재정의해야한다. 접근자에 따로 기능 변경이 필요 없다면 부모클래스의 접근자를 사용하여 값을 받아와
+
+반환해야한다 (super사용)
