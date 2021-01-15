@@ -97,3 +97,25 @@ class UniversityStudent: Student {
   
   override class func introduceClass() -> String {
     return "대학생의 소원은 A+ 입니다."
+  }
+  
+  override func speak() {
+    super.speak()
+    print("대학생이죠.")
+  }
+}
+
+let yagom: Person = Person()
+yagom.speak() // 가나다라마바사
+
+let jay: Student = Student()
+jay.speak() // 저는 학생입니다.
+
+let jenny: UniversityStudent = UniversityStudent()
+jenny.speak() // 저는 학생입니다. 대학생이죠.
+
+print(Person.introduceClass()) // 인류의 소원은 평화입니다.
+print(Student.introduceClass()) // 인류의 소원은 평화입니다.
+print(UniversityStudent.introduceClass() as String) // 대학생의 소원은 A+ 입니다.
+UniversityStudent.introduceClass() as Void // 인류의 소원은 평화입니다.
+```
