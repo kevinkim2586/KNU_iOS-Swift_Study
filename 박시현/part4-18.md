@@ -237,6 +237,16 @@ final class Student: Person {
  
  클래스 초기화는 2단계를 거침 
  
+ 2단계 초기화를 오류 없이 처리하기 위해 다음과 같은 네 가지 안전확인을 실행
+ 
+ 1. 자식클래스의 지정 이니셜라이저가 부모클래스의 이니셜라이저를 호출하기 전에 자신의 프로퍼티를 모두 초기화했는지 확인
+ 
+ 2. 자식클래스의 지정 이니셜라이저는 상속받은 프로퍼티에 값을 하랑하기 전에 반드시 부모클래스의 이니셜라이저를 호출
+ 
+ 3. 편의 이니셜라이저는 자신의 클래스에 정의한 프로퍼티를 포함하여 그 어떤 프로퍼티라도 값을 할당하기 전에 다른 이니셜라이저를 호출해야 함
+ 
+ 4. 초기화 1단계를 마치기 전까지는 이니셜라이저는 인스턴스 메서드를 호출할 수 없음. 또, 인스턴스 프로퍼티의 값을 읽어들일 수도 없음. self 프로퍼티를 자신의 인스턴스를 나타내는 값으로 활용할 수도 없음.
+ 
  * 1단계 
  1. 클래스가 지정 또는 편의 이니셜라이저를 호출함
  
@@ -252,11 +262,62 @@ final class Student: Person {
  
  1. 최상위 클래스로부터 최하위 클래스까지 상속 체인을 따라 내려오면서 지정 이니셜라이저들이 인스턴스를 제각각 사용자 정의하게 된다. 이 단계에서는 self를 통해 프로퍼티 값을 수정할 수 있고, 인스턴스 메서드를 호출하는 등의 작업을 진행할 수 있다
  
+ 2. 마지막으로 각각의 편의 이니셜라이저를 통해 self를 통한 사용자 정의 작업을 진행할 수 있다.
  
+```swift
+class Person {
+  var name: String
+  var age: Int
+  
+  init(name: String, age: Int) {
+    self.name = name
+    self.age = age
+  }
+}
+
+class Student: Person {
+  var major: String
+  
+  init(name: String, age: Int, major: String) {
+    self.major = "Swift" // 안전확인 중 1번 만족
+    super.init(name: name, age: age) // 안전확인 중 2번 만족
+  }
+
+  convenience init(name: String) { // 안전확인 중 3번 만족
+    self.init(name: name, age: 7, major: " ")
+  }
+} // 이니셜라이저 어디에서도 인스턴스 메서드를 호출하거나 프로퍼티 값을 읽어오지 않았으므로 안전확인 중 4번 만족
+```
  
  <h3>18.3.4 이니셜라이저 상속 및 재정의</h3>
  
+ ```swift
+ override init(name: String, age: Int) {
+  self.major = "Swift"
+  super.init(name: name, age: age)
+ }
+ 
+ convenience init(name: String) {
+  self.init(name: name, age: 7)
+ } // 편의 이니셜라이저 재정의에서는 override 수식어를 붙이지 않음
+ ```
+ 
+ ```swift
+ // 실패 가능한 이니셜라이저의 재정의
+ override init?(name: String, age: Int) {
+  self.major = "Swift"
+  super.init(name: name, age: age)
+ }
+ 
+ override init(age: Int) {
+  self.major = "Swift"
+  super.init()
+ }
+ ```
+ 
  <h3>18.3.5 이니셜라이저 자동 상속</h3>
+ 
+ 
  
  <h3>18.3.6 요구 이니셜라이저</h3>
  
