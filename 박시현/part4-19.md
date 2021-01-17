@@ -103,6 +103,44 @@ print(someType) // SomeProtocol
 
 <h2>19.4 다운캐스팅</h2>
 
+다운캐스팅 - 클래스의 상속에서 자식클래스보다 더 상위에 있는 부모클래스의 타입을 자식클래스의 타입으로 캐스팅
+타입캐스트 연산자 - as? as!
+as? - 다운캐스팅에 실패할 가능성이 있을때 사용 성공하면 옵셔널 타입으로 인스턴스 반환, 실패할 경우 nil 반환
+as! - 다운캐스팅이 무조건 성공할 것이라고 확신할 때 사용
+
+```swift
+if let actingOne: Americano = coffee as? Americano {
+    print("This is Americano")
+} else {
+    print(coffee.description)
+}
+// 1 shot(s) coffee
+
+if let actionOne: Coffee = coffe as? Coffee {
+    print("This is Just Coffee")
+} else {
+    print(coffee.description)
+}
+// This is Just Coffee
+
+let castedCoffee: Coffee = yourcoffee as! Coffee // 성공
+
+let castedAmericano: Americano = coffe as! Americano // 
+```
 
 <h2>19.5 Any, AnyObject의 타입캐스팅</h2>
+
+AnyObject의 타입캐스팅
+```swift
+func castTypeToAppropriate(item: AnyObject) {
+    if let castedItem: Latte = item as? Latte {
+        print(castedItem.description)
+    } else if let castedItem: Coffee = item as? Coffee {
+        print(castedItem.description)
+    } else {
+        print("UnKnown Type")
+    }
+}
+
+castTypeTosf
 
