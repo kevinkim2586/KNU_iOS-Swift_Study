@@ -47,7 +47,7 @@ extension Int {
 ```
 <h3>21.3.3 이니셜라이저</h3>
 
-```swfit
+```swift
 struct Size {
     var width = 0.0, height = 0.0
 }
