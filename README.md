@@ -61,7 +61,7 @@ Swift 및 iOS에 대해 스터디하고 내용을 정리하는 공간입니다.
 > | 18      | 상속     | X       | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter18.md)       | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/part4-18.md)      | X  |
 > | 19      | 타입캐스팅| X       | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter19.md)       | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/part4-19.md)       | X  |
 > | 20      | 프로토콜| X       | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter20.md)       | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/part4-20.md)      | X  |
-> | 21      | 익스텐션| X       | X       | X       | X  |
+> | 21      | 익스텐션| X       | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter21.md)       | X       | X  |
 > | 22      | 제네릭| X       | X       | X       | X  |
 > | 23      | 프로토콜 지향 프로그래밍| X       | X       | X       | X  |
 
