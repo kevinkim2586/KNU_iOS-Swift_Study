@@ -27,6 +27,33 @@ extension 확장할 타입 이름: 프로토콜1, 프로토콜2, 프로토콜3 {
 
 <h3>21.3.1 연산 프로퍼티</h3>
 
+익스텐션으로 연산 프로퍼티를 추가할 수는 있지만, 저장 프로퍼티를 추가할 순 없다 또, 타입에 정의되어 있는 기존의 프로퍼티에 프로퍼티 옵저버를 추가할 수도 없다.
+
+```swift
+extension Int {
+    var isEven: Bool {
+        return self % 2 == 0
+    }
+    
+    var isOdd: Bool {
+        return self % w == 0
+    }
+}
+
+print(1.isEven) // false
+print(2.isEven) // true
+print(1.isOdd) // true
+print(2.isOdd) // false
+
+var number: Int = 3
+print(number.isEven) // false
+print(number.isOdd) // true
+
+number = 2
+print(number.isEven) // true
+print(number.isOdd) // false
+```
+
 <h3>21.3.2 메서드</h3>
 
 ```swift
@@ -98,6 +125,40 @@ extension String {
 print("abc"["def"]) // "abcdef"
 print("abc"[3]) // abcabcabc
 ```
-<h3>21.3.1 연산 프로퍼티</h3>
+<h3>21.3.5 중첩 데이터 타입</h3>
 
+```swift
+extension Int {
+    enum Kind {
+        case negative, zero, positive
+    }
+    var kind: Kind {
+        switch self {
+        case 0:
+            return .zero
+        case let x where x > 0:
+            return .positive
+        default:
+            return .negative
+        }
+    }
+}
 
+func printIntegerKinds(_ numbers: [Int]) {
+    for number in numbers {
+        switch number.kind {
+        case .negative:
+            print("- ", terminator: "")
+        case .zero:
+            print("0 ", terminator: "")
+        case .positive:
+            print("+ ", terminator: "")
+        }
+    }
+    print("")
+}
+printIntegerKinds([3, 19, -27, 0, -6, 0, 7])
+// Prints "+ + - 0 - 0 + "
+
+number.kind가 이미 switch에서 Int.Kind 타입이라는 것을 알고 있기 때문에 안의 case에서 kind의 축약형인 .negative, .zeo, .positive로 사용할 수 있습니다.
+```
