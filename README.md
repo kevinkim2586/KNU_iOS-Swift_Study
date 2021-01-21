@@ -73,5 +73,4 @@ Swift 및 iOS에 대해 스터디하고 내용을 정리하는 공간입니다.
 > | 26 | where 절 | X | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter26.md) | X | X |
 > | 27 | ARC | X | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter27.md) | X | X |
 > | 28 | 오류처리 | X | X | X | X |
-> | 29 | 메모리 안전 | X | X | X | X |
-> | 30 | 불명확 타입 | X | X | X | X |
+
