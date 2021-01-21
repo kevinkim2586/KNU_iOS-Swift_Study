@@ -62,15 +62,15 @@ Swift 및 iOS에 대해 스터디하고 내용을 정리하는 공간입니다.
 > | 19      | 타입캐스팅| [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EC%9D%B4%EC%A4%80%EA%B8%B0/part4/chapter19.md)       | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter19.md)       | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/part4-19.md)       | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/김진영/part4/chapter19.md)  |
 > | 20      | 프로토콜| [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EC%9D%B4%EC%A4%80%EA%B8%B0/part4/chapter20.md)       | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter20.md)       | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/part4-20.md)      | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/김진영/part4/chapter20.md)  |
 > | 21      | 익스텐션| [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EC%9D%B4%EC%A4%80%EA%B8%B0/part4/chapter21.md)       | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter21.md)       | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/part4-21.md)       | X  |
-> | 22      | 제네릭| X       | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter22.md)       | X       | X  |
-> | 23      | 프로토콜 지향 프로그래밍| X       | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter23.md)       | X       | X  |
+> | 22      | 제네릭| [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EC%9D%B4%EC%A4%80%EA%B8%B0/part4/chapter22.md)       | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter22.md)       | X       | X  |
+> | 23      | 프로토콜 지향 프로그래밍| [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EC%9D%B4%EC%A4%80%EA%B8%B0/part4/chapter23.md)       | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter23.md)       | X       | X  |
 
 * **Part 5: 스위프트 고급**
 > | Chapter | Subject           | 이준기 | 김영채 | 박시현 | 김진영 |
 > | ------- | ----------------- | ---- | ---- | ----  | ---- |
-> | 24 | 타입 중첩 | X | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter24.md) | X | X |
-> | 25 | 패턴 | X | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter25.md) | X | X |
-> | 26 | where 절 | X | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter26.md) | X | X |
-> | 27 | ARC | X | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter27.md) | X | X |
-> | 28 | 오류처리 | X | X | X | X |
+> | 24 | 타입 중첩 | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EC%9D%B4%EC%A4%80%EA%B8%B0/part4/chapter24.md) | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter24.md) | X | X |
+> | 25 | 패턴 | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EC%9D%B4%EC%A4%80%EA%B8%B0/part4/chapter25.md) | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter25.md) | X | X |
+> | 26 | where 절 | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EC%9D%B4%EC%A4%80%EA%B8%B0/part4/chapter26.md) | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter26.md) | X | X |
+> | 27 | ARC | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EC%9D%B4%EC%A4%80%EA%B8%B0/part4/chapter27.md) | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter27.md) | X | X |
+> | 28 | 오류처리 | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EC%9D%B4%EC%A4%80%EA%B8%B0/part4/chapter28.md) | X | X | X |
 
