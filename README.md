@@ -68,7 +68,7 @@ Swift 및 iOS에 대해 스터디하고 내용을 정리하는 공간입니다.
 * **Part 5: 스위프트 고급**
 > | Chapter | Subject           | 이준기 | 김영채 | 박시현 | 김진영 |
 > | ------- | ----------------- | ---- | ---- | ----  | ---- |
-> | 24 | 타입 중첩 | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EC%9D%B4%EC%A4%80%EA%B8%B0/part4/chapter24.md) | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter24.md) | X | X |
+> | 24 | 타입 중첩 | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EC%9D%B4%EC%A4%80%EA%B8%B0/part4/chapter24.md) | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter24.md) | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/박시현/part5-24.md) | X |
 > | 25 | 패턴 | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EC%9D%B4%EC%A4%80%EA%B8%B0/part4/chapter25.md) | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter25.md) | X | X |
 > | 26 | where 절 | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EC%9D%B4%EC%A4%80%EA%B8%B0/part4/chapter26.md) | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter26.md) | X | X |
 > | 27 | ARC | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EC%9D%B4%EC%A4%80%EA%B8%B0/part4/chapter27.md) | [O](https://github.com/kevinkim2586/KNU_iOS-Swift_Study/blob/main/%EA%B9%80%EC%98%81%EC%B1%84/Chapter27.md) | X | X |
