@@ -8,6 +8,38 @@ ARC - 더이상 필요하지 않은 클래스의 인스턴스를 메모리에서
 
 <h2>27.2 강한참조</h2>
 
+강한참조 - 참조의 기본
+
+```swift
+class Person {
+    let name: String
+    
+    init(name: String) {
+        self.name = name
+        print("\(name) is being initialized")
+    }
+    
+    deinit {
+        print("\(name) is being deinitialized")
+    }
+}
+
+var reference1: Person?
+var reference2: Person?
+var reference3: Person?
+
+reference1 = Person(name: "yagom")
+// yagom is being initialized
+// 인스턴스의 참조 횟수 : 1
+
+reference2 = reference1 // 인스턴스의 참조 횟수 : 2
+reference3 = reference1 // 인스턴스의 참조 횟수 : 3
+
+reference3 = nil // 인스턴스의 참조 횟수 : 2
+reference2 = nil // 인스턴스의 참조 횟수 : 1
+reference1 = nil // 인스턴스의 참조 횟수 : 0
+// yagom is being deinitialized
+```
 <h2>27.3 약한참조</h2>
 
 <h2>27.4 미소유 참조</h2>
