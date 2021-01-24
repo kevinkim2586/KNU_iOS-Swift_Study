@@ -163,3 +163,4 @@ Double(8.0).printSelf()
 
 // 그 외 SelfPrintable을 준수하는 타입 Person
 Person().printSelf()
+```
