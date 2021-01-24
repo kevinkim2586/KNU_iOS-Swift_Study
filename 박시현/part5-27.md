@@ -42,6 +42,7 @@ reference1 = nil // 인스턴스의 참조 횟수 : 0
 ```
 
 <h3>27.2.1 강한참조 순환 문제</h3>
+
 ```swift
 class Person {
     let name: String
