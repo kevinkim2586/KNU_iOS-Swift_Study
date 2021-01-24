@@ -128,7 +128,7 @@ enum MainDish {
     case rice
 }
 
-var dishes: [Maindish] = []
+var dishes: [MainDish] = []
 
 var dinner: MainDish = .pasta(taste: "크림") // 크림 파스타
 dishes.append(dinner)
@@ -138,7 +138,7 @@ dishes.append(dinner)
 
 func whatIsThis(dish: MainDish) {
     guard case .pizza(let dough, let topping) = dinner else {
-        print("It's not a Pizza)
+        print("It's not a Pizza")
         return
     }
     
@@ -161,10 +161,91 @@ if case .rice = dinner {
     print("오늘 저녁은 밥입니다.")
 } // 오늘 저녁은 밥입니다.
 
+for dish in dishes {
+    switch dish {
+    case let .pasta(taste): print(taste)
+    case let .pizza(dough, topping): print(dough, topping)
+    case let .chicken(sauced): print(sauced ? "양념" : "후라이드")
+    case let .rice: print("Just 쌀")
+    }
+}
+/*
+크림
+치즈크러스트 불고기
+양념
+Just 쌀
+*/
+```
+
 
 <h2>25.6 옵셔널 패턴</h2>
 
+옵셔널 패턴 - 식별자 패턴 뒤에 물음표를 넣어 표기하며 열거형 케이스 패턴과 동일한 위치에 자리함
+
+```swift
+var optionalValue: Int? = 100
+
+if case .some(let value) = optionalvalue {
+    print(value)
+} // 100
+
+if case let value? = optionalValue {
+    print(value)
+} // 100
+
+func isItHasValue(_ optionalValue: Int?) {
+    guard case .some(let value) = optionalValue else {
+        print("none")
+        return
+    }
+    
+    print(value)
+}
+
+isItHasValue(optionalValue) // 100
+
+while case .some(let value) = optionalValue {
+    print(value)
+    optionalValue = nil
+} // 100
+
+print(optionalValue) // nil
+
+let arrayOfOptionalInts: [Int?] = [nil, 2, 3, nil, 5]
+
+for case let number? in arrayOfOptionalInts {
+    print("Found a \(number)")
+}
+//Found a 2
+//Found a 3
+//Found a 5
+```
+
 <h2>25.7 타입캐스팅 패턴</h2>
 
+is 패턴은 Switch case 레이블에서만 사용가능, is (TYPE_NAME)과 같이 쓸 수 있음
+
+as 패턴은 SomePattern as (TYPE_NAME)과 같이 쓸 수 있음
+
+```swift
+let someValue: Any = 100
+
+switch someValue {
+// 타입이 Int인지 확인하지만 캐스팅된 값을 사용할 수는 없습니다.
+case is String: print("It's String!")
+
+// 타입 확인과 동시에 캐스팅까지 완료되어 value에 저장됩니다.
+// 값 바인딩 패턴과 결합된 모습입니다.
+case let value as Int: print(value + 1)
+default: print("Int도 String도 아닙니다.")
+} // 101
+```
 <h2>25.8 표현 패턴</h2>
 
+표현 패턴 - switch 구문의 case 레이블에서만 사용 가능 ~= 연산자의 연산 결과가 true를 반환하면 매치시킴
+
+```swift
+switch 3 {
+case 0...5: print("0과 5
+표현 패턴 - switch 구문의 case 레이블에서만 사용 가능 ~= 연산자의 연산 결과가 true를 반환하면 매치시킴 사이"
+표현 패턴 - switch 구문의 case 레이블에서만 사용 가능 ~= 연산자의 연산 결과가 true를 반환하면 매치시킴)
