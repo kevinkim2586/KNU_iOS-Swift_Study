@@ -18,7 +18,7 @@ enum VendingMachineError: Error {
 
 자판기 동작 오류를 표현한 코드인데 이렇게 오류의 종류를 미리 예상한 다음 오류를 throw 해주면 됨
 
-만약 자금이 부족하고 동전이 5개 더 필요한 상황이라면 throw VendingMachineError.insufficientFunds(coinsNeede: 5)
+만약 자금이 부족하고 동전이 5개 더 필요한 상황이라면 throw VendingMachineError.insufficientFunds(coinsNeeded: 5)
 
 <h2>28.3 오류 포착 및 처리</h2>
 
