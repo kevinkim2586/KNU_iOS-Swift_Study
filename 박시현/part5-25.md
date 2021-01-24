@@ -267,5 +267,29 @@ func ~= (pattern: String, value: Int) -> Bool {
 
 point = (0, 0)
 
-// 새로 정의된 
-point = (0, 0)
+// 새로 정의된 ~= 연산자를 사용하여 비교합니다.
+switch point {
+case ("0", "0"): print("원점")
+default: print("point (\(point.0), \(point.1))")
+} // 원점
+
+struct Person {
+    var name: String
+    var age: Int
+}
+
+let lingo: Person = Person(name: "Lingo", age: 99)
+func ~= (pattern: String, value: Person) -> Bool {
+    return pattern == value.name
+}
+
+func ~= (pattern: Person, value: Person) -> Bool {
+    return pattern.name == value.name && pattern.age == value. age
+}
+
+switch lingo {
+case Person(name: "Lingo", age: 99): print("Same Person!!")
+case "Lingo": print("Hello Lingo!!")
+default: print("I don't know who you are")
+} // Same Person!!
+```
