@@ -246,6 +246,26 @@ default: print("Int도 String도 아닙니다.")
 
 ```swift
 switch 3 {
-case 0...5: print("0과 5
-표현 패턴 - switch 구문의 case 레이블에서만 사용 가능 ~= 연산자의 연산 결과가 true를 반환하면 매치시킴 사이"
-표현 패턴 - switch 구문의 case 레이블에서만 사용 가능 ~= 연산자의 연산 결과가 true를 반환하면 매치시킴)
+case 0...5: print("0과 5사이")
+default: print("0보다 작거나 5보다 큽니다. ")
+} // 0과 5 사이
+
+var point: (Int, Int) = (1, 2)
+
+// 같은 타입 간의 비교이므로 == 연산자를 사용하여 비교할 것입니다.
+var point: (Int, Int, Int, Int) = (1, 2, 3, 4)
+switch point {
+case (0, 0, 0, 0): print("원점")
+case (-2...2, -2...2, -2...2, -2...2): print("(\(point.0), \(point.1), \(point.2), \(point.3)은 원점과 가깝습니다.")
+default: print("point (\(point.0), \(point.1), \(point.2), \(point.3))")
+} // (1, 2, 3, 4)는 원점과 가깝습니다.
+
+//String 타입과 Int 타입이 매치될 수 있도록 ~= 연산자를 정의합니다.
+func ~= (pattern: String, value: Int) -> Bool {
+    return pattern == "\(value)"
+}
+
+point = (0, 0)
+
+// 새로 정의된 
+point = (0, 0)
