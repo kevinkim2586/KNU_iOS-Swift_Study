@@ -112,6 +112,56 @@ for(x, _) in points {
 
 <h2>25.5 열거형 케이스 패턴</h2>
 
+열거형 케이스 패턴 - 값을 열거형 타입의 case와 매치시킴
+
+```swift
+let someValue: Int = 30
+
+if case0...100 = someValue {
+   print("0 <= \(someValue) <= 100")
+} // 0 <= 30 <= 100
+
+enum MainDish {
+    case pasta(taste: String)
+    case pizza(dough: String, topping: String)
+    case chicken(withSauce: Bool)
+    case rice
+}
+
+var dishes: [Maindish] = []
+
+var dinner: MainDish = .pasta(taste: "크림") // 크림 파스타
+dishes.append(dinner)
+
+dinner = .pizza(dough: "치즈크러스트", topping: "불고기") // 치즈크러스트 불고기 피자 만들기
+dishes.append(dinner)
+
+func whatIsThis(dish: MainDish) {
+    guard case .pizza(let dough, let topping) = dinner else {
+        print("It's not a Pizza)
+        return
+    }
+    
+    print("\(dough) \(topping) 피자")
+}
+whatIsThis(dish: dinner) // 치즈크러스트 불고기 피자
+
+dinner = .chicken(withSauce: true) // 양념 통닭 만들기
+dishes.append(dinner)
+
+while case .chicken(let sauced) = dinner {
+    print("\(sauced ? "양념" : "후라이드") 통닭")
+    break
+} // 양념 통닭
+
+dinner = .rice // 밥
+dishes.append(dinner)
+
+if case .rice = dinner {
+    print("오늘 저녁은 밥입니다.")
+} // 오늘 저녁은 밥입니다.
+
+
 <h2>25.6 옵셔널 패턴</h2>
 
 <h2>25.7 타입캐스팅 패턴</h2>
